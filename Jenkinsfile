@@ -12,18 +12,18 @@ pipeline{
 			}
 		}
 		stage('Deploy - DEV') {
+			when { branch 'dev' }			
  			 steps {
-				when { branch 'dev' }			
 				echo 'DEV DEPLOY successful'
 			}
   			  
 		}
 		stage('Deploy - PROD') {
- 			 steps {
-				when { branch 'prod' }			
+			when { branch 'prod' }
+ 			 steps {			
 				echo 'PROD DEPLOY successful'
 			}
   			  
-		}
+		
 	}
 }

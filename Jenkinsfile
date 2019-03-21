@@ -14,7 +14,14 @@ pipeline{
 		stage('Deploy - DEV') {
  			 steps {
 				when { branch 'dev' }			
-				echo 'dev DEPLOY successful'
+				echo 'DEV DEPLOY successful'
+			}
+  			  
+		}
+		stage('Deploy - PROD') {
+ 			 steps {
+				when { branch 'prod' }			
+				echo 'PROD DEPLOY successful'
 			}
   			  
 		}

@@ -13,7 +13,7 @@ pipeline{
 		}
 		stage('Deploy - DEV') {
  			 steps {
-				if ( branch 'dev' ){			
+				if ( branch 'dev' ) {			
 					echo 'dev DEPLOY successful'
 				}
   			  
@@ -21,7 +21,7 @@ pipeline{
 		}
 		stage('Deploy - PROD') {
  			 steps {
-				if ( branch 'prod' ){			
+				if ( branch 'prod' ) {			
 					echo 'dev DEPLOY successful'
 				}
 			}

@@ -14,16 +14,20 @@ pipeline{
 		stage('Deploy - DEV') {
  			 steps {
 				when {
-                branch 'dev'  
-                }
+					allOf {
+					branch 'dev'
+					}
+				}
   			  echo 'dev DEPLOY successful'
 			}
 		}
 		stage('Deploy - PROD') {
  			 steps {
 				when {
-                branch 'prod'  
-                }
+					allOf {
+					branch 'prod'
+					}
+				}
   			  echo 'prod DEPLOY successful'
 			}
 		}

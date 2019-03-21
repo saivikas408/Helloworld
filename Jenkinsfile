@@ -23,7 +23,6 @@ pipeline{
  			 steps {			
 				echo 'PROD DEPLOY successful'
 			}
-  			  
-		
+		}
 	}
 }

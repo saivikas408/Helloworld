@@ -14,9 +14,7 @@ pipeline{
 		stage('Deploy - DEV') {
  			 steps {
 				when {
-					allOf {
 					branch 'dev'
-					}
 				}
   			  echo 'dev DEPLOY successful'
 			}
@@ -24,9 +22,7 @@ pipeline{
 		stage('Deploy - PROD') {
  			 steps {
 				when {
-					allOf {
 					branch 'prod'
-					}
 				}
   			  echo 'prod DEPLOY successful'
 			}

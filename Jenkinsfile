@@ -13,17 +13,10 @@ pipeline{
 		}
 		stage('Deploy - DEV') {
  			 steps {
-				if ( branch 'dev' ) {			
-					echo 'dev DEPLOY successful'
+				when { branch 'dev' }			
+				echo 'dev DEPLOY successful'
 				}
   			  
-			}
-		}
-		stage('Deploy - PROD') {
- 			 steps {
-				if ( branch 'prod' ) {			
-					echo 'dev DEPLOY successful'
-				}
 			}
 		}
 	}

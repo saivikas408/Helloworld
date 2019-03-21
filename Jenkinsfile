@@ -15,9 +15,8 @@ pipeline{
  			 steps {
 				when { branch 'dev' }			
 				echo 'dev DEPLOY successful'
-				}
-  			  
 			}
+  			  
 		}
 	}
 }
